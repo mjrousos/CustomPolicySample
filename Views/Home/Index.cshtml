@@ -1,0 +1,19 @@
+﻿<h1>Custom Authorization Policy Provider Sample</h1>
+<h2>Current user: @(User?.Identity.Name ?? "<none>")</h2>
+<p>
+    This sample demonstrates a custom IAuthorizationPolicyProvider which
+    dynamically generates authorization policies based on arguments
+    (in this case, a string indicating the project name required to
+    satisfy the policies requirements).
+</p>
+<p>
+    Use the links below to sign in, sign out, or to try accessing pages
+    requiring different projects.
+</p>
+
+<ul>
+    <li>@Html.ActionLink("Sign In", "Signin", "Account")</li>
+    <li>@Html.ActionLink("Sign Out", "Signout", "Account")</li>
+    <li>@Html.ActionLink("Project A", "ProjectA", "Home")</li>
+    <li>@Html.ActionLink("Project B", "ProjectB", "Home")</li>
+</ul>

@@ -1,0 +1,17 @@
+﻿@using System.Security.Claims
+
+@*Project name*@
+@model string
+
+@{
+    var dateOfBirth = User.FindFirst(c => c.Type == ClaimTypes.DateOfBirth)?.Value;
+}
+
+<!-- Welcome user and display DateOfBirth claim value -->
+<h1>Project @Model</h1>
+<h2>Welcome, @User.Identity.Name</h2>
+
+<ul>
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Sign Out", "Signout", "Account")</li>
+</ul>
